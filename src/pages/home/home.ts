@@ -35,11 +35,11 @@ export class HomePage {
     });
 
     setTimeout(() => {
-      this.Data()
+      this.prepareData()
     }, 1200);
   }
 
-  Data() {
+  prepareData() {
      Object.keys(this.myObj).forEach((batchName, index) => {
       console.log('this.myObj[batchName]', this.myObj[batchName].name);
       this.names.push(
@@ -56,5 +56,17 @@ export class HomePage {
 
   onSubmit() {
     console.log(this.batchesForm.value);
+  }
+
+  addControlProgrammatically(newName:string) {
+    this.names.push(
+      this.fb.group({
+        skill: newName,
+      }
+    ));
+  }
+
+  removeName(i:number) {
+    this.names.removeAt(i);
   }
 }

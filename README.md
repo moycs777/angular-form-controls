@@ -2,10 +2,11 @@
 
 This source code is part of [Ionic 2 and Angular 4 Mobile App Example](https://www.djamware.com/post/58e657b680aca764ec903c2d/ionic-3-and-angular-4-mobile-app-example)
 
-To run this source:
+But i copied just to test the angular form array, thanks djamware!!
 
-* Clone this git
-* Run 'npm install'
-* Run 'ionic serve -l'
+after clone this repo, place the terminal in the root, execute npm i, i have node version 10.36 and npm 
+version 6.9.0
 
-If you think this source code is useful, it will be great if you just give it star or just buy me a cup of cofee [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q5WK24UVWUGBN)
+This is a great example of how to add and remove form controls programmatically.
+
+Why i am using this repo? because i was needing some ionic 3 example.
