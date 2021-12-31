@@ -22,7 +22,6 @@ export class HomePage {
   };
 
   skillsForm: FormGroup;
-  batchNamesForm: FormGroup;
 
   constructor(
     private fb:FormBuilder
@@ -32,7 +31,7 @@ export class HomePage {
 
   prepareForm() {
     this.skillsForm = this.fb.group({
-      name: '',
+      names: this.fb.array([]),
       skills: this.fb.array([]) ,
     });
 
