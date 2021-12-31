@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    array test
+    <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+
+      Skills:
+      <div formArrayName="skills">
+        <div *ngFor="let skill of skills.controls; let i=index">
+          <div [formGroupName]="i">
+            {{i}}
+            skill name :
+            <input type="text" formControlName="skill">
+          </div>
+        </div>
+
+      </div>
+
+     <p>
+        <button type="submit">Submit</button>
+      </p>
+
+    </form>
+  </ion-list>
+</ion-content>
