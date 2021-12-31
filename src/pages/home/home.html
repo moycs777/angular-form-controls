@@ -7,11 +7,11 @@
 <ion-content padding>
   <ion-list>
     array test
-    <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="batchesForm" (ngSubmit)="onSubmit()">
 
-      Skills:
-      <div formArrayName="skills">
-        <div *ngFor="let skill of skills.controls; let i=index">
+      names:
+      <div formArrayName="names">
+        <div *ngFor="let skill of names.controls; let i=index">
           <div [formGroupName]="i">
             {{i}}
             skill name :

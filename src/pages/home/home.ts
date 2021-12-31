@@ -21,7 +21,7 @@ export class HomePage {
 
   };
 
-  skillsForm: FormGroup;
+  batchesForm: FormGroup;
 
   constructor(
     private fb:FormBuilder
@@ -30,9 +30,8 @@ export class HomePage {
   }
 
   prepareForm() {
-    this.skillsForm = this.fb.group({
-      names: this.fb.array([]),
-      skills: this.fb.array([]) ,
+    this.batchesForm = this.fb.group({
+      names: this.fb.array([]) ,
     });
 
     setTimeout(() => {
@@ -43,7 +42,7 @@ export class HomePage {
   Data() {
      Object.keys(this.myObj).forEach((batchName, index) => {
       console.log('this.myObj[batchName]', this.myObj[batchName].name);
-      this.skills.push(
+      this.names.push(
         this.fb.group({
           skill: this.myObj[batchName].name,
         }
@@ -51,11 +50,11 @@ export class HomePage {
     });
   }
 
-  get skills() : FormArray {
-    return this.skillsForm.get("skills") as FormArray
+  get names() : FormArray {
+    return this.batchesForm.get("names") as FormArray
   }
 
   onSubmit() {
-    console.log(this.skillsForm.value);
+    console.log(this.batchesForm.value);
   }
 }
